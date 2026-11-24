@@ -2,7 +2,7 @@
 
 The bake writes /etc/nosi-metadata.json inside the VM; the smoketest
 scp's it out; the GHA push attaches it as an ORAS layer on each
-ghcr.io/safl/nosi/<variant>:<iso-week-tag> (and the :latest alias).
+ghcr.io/refenv/nosi/<variant>:<iso-week-tag> (and the :latest alias).
 
 This module pulls the metadata layer for every published variant and
 renders a beautified catalog: a landing page (catalog/index.md) with a
@@ -37,7 +37,7 @@ import yaml
 log = logging.getLogger(__name__)
 
 
-GHCR_PREFIX = "ghcr.io/safl/nosi"
+GHCR_PREFIX = "ghcr.io/refenv/nosi"
 
 
 def known_variants(repo_root: Path) -> tuple[tuple[str, str, str], ...]:
@@ -200,7 +200,7 @@ def _render_index(snapshots: Iterable[VariantSnapshot]) -> str:
         "# Catalog",
         "",
         "Every nosi image published to "
-        "[GHCR](https://github.com/safl/nosi/pkgs/container/nosi), listed here "
+        "[GHCR](https://github.com/orgs/refenv/packages?repo_name=nosi), listed here "
         "automatically. For the disk-image and rootfs shapes the fields below "
         "are read from the ORAS metadata layer that ships alongside each "
         "artifact; the docker shape is a plain OCI image (`docker pull`) so its "

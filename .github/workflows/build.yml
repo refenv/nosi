@@ -864,7 +864,7 @@ jobs:
   publish-catalog:
     # Cut a GitHub release carrying the bty-compatible catalog.toml so an
     # operator can point bty at it:
-    #   bty --catalog https://github.com/safl/nosi/releases/latest/download/catalog.toml
+    #   bty --catalog https://github.com/refenv/nosi/releases/latest/download/catalog.toml
     # Runs once (not per-variant) AFTER every base + derived shape + the Pi
     # built and pushed, so the catalog only advertises images that actually
     # shipped. needs: [build, derive, build-rpi] means one failed leg (a base,

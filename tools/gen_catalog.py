@@ -21,9 +21,9 @@ separate rootfs blurb):
 
    Operators point bty at one of:
 
-       https://github.com/safl/nosi/releases/download/<ROLLING>/catalog.toml
-       https://github.com/safl/nosi/releases/latest/download/catalog.toml
-       https://github.com/safl/nosi/releases/latest/download/catalog-latest.toml
+       https://github.com/refenv/nosi/releases/download/<ROLLING>/catalog.toml
+       https://github.com/refenv/nosi/releases/latest/download/catalog.toml
+       https://github.com/refenv/nosi/releases/latest/download/catalog-latest.toml
 
 The catalog is schema v1 (``bty.catalog``). The wsl rootfs is deliberately
 excluded (``flashable: false``): it is imported via ``wsl --import``, not
@@ -54,7 +54,7 @@ DESCRIPTIONS_DIR = REPO_ROOT / "descriptions"
 # (ghcr.io/<owner>/<repo>/<variant>). Kept in lockstep with build.yml's
 # ${REPO}; a constant here because the catalog is published for the
 # canonical repo, not a fork.
-ORAS_NAMESPACE = "ghcr.io/safl/nosi"
+ORAS_NAMESPACE = "ghcr.io/refenv/nosi"
 
 
 def _load_registry() -> dict[str, dict]:
@@ -126,11 +126,11 @@ def _render_catalog(variants: dict[str, dict], ref_tag: str) -> str:
             "# variants.yml by tools/gen_catalog.py and published as a GitHub",
             "# release asset:",
             "#",
-            "#   https://github.com/safl/nosi/releases/latest/download/catalog-latest.toml",
+            "#   https://github.com/refenv/nosi/releases/latest/download/catalog-latest.toml",
             "#",
             "# Point bty at it:",
             "#",
-            "#   bty --catalog https://github.com/safl/nosi/releases/latest/download/catalog-latest.toml",
+            "#   bty --catalog https://github.com/refenv/nosi/releases/latest/download/catalog-latest.toml",
             "#",
             "# Refs are rolling oras :latest tags; the layer digest is verified",
             "# at flash time. The wsl rootfs is intentionally absent (it is",
@@ -147,16 +147,16 @@ def _render_catalog(variants: dict[str, dict], ref_tag: str) -> str:
             f"# release asset, pinned to oras tag :{ref_tag}.",
             "#",
             "# Pinned form (this file):",
-            f"#   https://github.com/safl/nosi/releases/download/{ref_tag}/catalog.toml",
+            f"#   https://github.com/refenv/nosi/releases/download/{ref_tag}/catalog.toml",
             "#",
             "# Or always-latest pointer (auto-bumps with each release;",
             "# refs inside are pinned to whatever tag was current at",
             "# fetch time):",
-            "#   https://github.com/safl/nosi/releases/latest/download/catalog.toml",
+            "#   https://github.com/refenv/nosi/releases/latest/download/catalog.toml",
             "#",
             "# Point bty at it:",
             "#",
-            f"#   bty --catalog https://github.com/safl/nosi/releases/download/{ref_tag}/catalog.toml",
+            f"#   bty --catalog https://github.com/refenv/nosi/releases/download/{ref_tag}/catalog.toml",
             "#",
             "# Refs are pinned to a specific build, so an operator running",
             "# the same URL months apart picks up identical bytes (the layer",
