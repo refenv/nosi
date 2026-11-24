@@ -4,7 +4,7 @@ nosi bakes system images: headless and desktop disk images for bare metal and
 VMs, plus WSL, OCI and LXC rootfs. Upstream cloud images are booted in QEMU,
 cloud-init runs `provision/apply.sh`, and the result is smoketested, packed
 and pushed to GHCR. User-facing documentation is the Sphinx site under `docs/`
-(published at <https://safl.dk/nosi>).
+(published at <https://refenv.github.io/nosi>).
 
 ## Layout
 

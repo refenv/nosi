@@ -6,10 +6,10 @@
 
 *(Pronounced "nosy", because I can't help putting these images on every machine I touch.)*
 
-[![build](https://github.com/safl/nosi/actions/workflows/build.yml/badge.svg)](https://github.com/safl/nosi/actions/workflows/build.yml)
-[![docs](https://github.com/safl/nosi/actions/workflows/docs.yml/badge.svg)](https://safl.dk/nosi)
+[![build](https://github.com/refenv/nosi/actions/workflows/build.yml/badge.svg)](https://github.com/refenv/nosi/actions/workflows/build.yml)
+[![docs](https://github.com/refenv/nosi/actions/workflows/docs.yml/badge.svg)](https://refenv.github.io/nosi)
 [![license](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](LICENSE)
-[![release](https://img.shields.io/badge/release-rolling-orange.svg)](https://safl.dk/nosi/release.html)
+[![release](https://img.shields.io/badge/release-rolling-orange.svg)](https://refenv.github.io/nosi/release.html)
 
 Automated, rolling builds of headless and desktop system images for bare metal
 (x86_64, Raspberry Pi 4/5) and virtual machines (QEMU, WSL2, Proxmox), plus
@@ -25,4 +25,4 @@ required.
 The variant catalog, quick start, pull/flash recipes, default credentials, the
 desktop shape, and the rolling-release model all live at:
 
-### → <https://safl.dk/nosi>
+### → <https://refenv.github.io/nosi>

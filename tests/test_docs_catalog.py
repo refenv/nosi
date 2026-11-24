@@ -24,7 +24,7 @@ def test_known_variants_matches_registry(repo_root):
 def test_render_docker_variant_page():
     snap = catalog.VariantSnapshot(
         name="ubuntu-2604-docker",
-        ref="ghcr.io/safl/nosi/ubuntu-2604-docker:latest",
+        ref="ghcr.io/refenv/nosi/ubuntu-2604-docker:latest",
         shape="docker",
         description="An OCI image for CI.",
     )
@@ -32,7 +32,7 @@ def test_render_docker_variant_page():
     assert "# `ubuntu-2604-docker`" in out
     assert "An OCI image for CI." in out
     # docker pull flow, not the oras-pull + dd flash the disk images render.
-    assert "docker pull ghcr.io/safl/nosi/ubuntu-2604-docker:latest" in out
+    assert "docker pull ghcr.io/refenv/nosi/ubuntu-2604-docker:latest" in out
     assert "oras pull" not in out
 
 

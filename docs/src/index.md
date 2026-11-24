@@ -1,8 +1,8 @@
 # Nic(h)e Operating System Images
 
 ```{only} html
-[![build](https://github.com/safl/nosi/actions/workflows/build.yml/badge.svg)](https://github.com/safl/nosi/actions/workflows/build.yml)
-[![license](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](https://github.com/safl/nosi/blob/main/LICENSE)
+[![build](https://github.com/refenv/nosi/actions/workflows/build.yml/badge.svg)](https://github.com/refenv/nosi/actions/workflows/build.yml)
+[![license](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](https://github.com/refenv/nosi/blob/main/LICENSE)
 [![release](https://img.shields.io/badge/release-rolling-orange.svg)](release.md)
 ```
 

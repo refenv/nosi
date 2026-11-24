@@ -68,11 +68,11 @@ image (already produced as an intermediate by img_gz_pack), reads
 - `kernel_version` (from filename)
 - `framework` (initramfs-tools | dracut)
 - `hook_version` (nosi commit sha at build)
-- `source_disk_ref` (the sibling `ghcr.io/safl/nosi/<variant>:<tag>`)
+- `source_disk_ref` (the sibling `ghcr.io/refenv/nosi/<variant>:<tag>`)
 - `sha256` for each file
 
 Tarballed for a single ORAS artifact:
-`ghcr.io/safl/nosi/<variant>-netboot:<ROLLING>` +
+`ghcr.io/refenv/nosi/<variant>-netboot:<ROLLING>` +
 `:latest`. Media type `application/vnd.nosi.netboot-bundle.v1+tar`.
 
 ### Wire contract to bty

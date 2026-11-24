@@ -38,7 +38,7 @@ VARIANT='debian-13-headless'
 
 # pull the latest of any variant into the current dir
 # (lands as nosi-<variant>-x86_64.img.gz + sidecars)
-oras pull "ghcr.io/safl/nosi/${VARIANT}:latest"
+oras pull "ghcr.io/refenv/nosi/${VARIANT}:latest"
 
 # flash
 gunzip -d "nosi-${VARIANT}-x86_64.img.gz" \
@@ -55,7 +55,7 @@ device's first sector:
 
 ```bash
 VARIANT='debian-13-headless'
-REPO="ghcr.io/safl/nosi/${VARIANT}"
+REPO="ghcr.io/refenv/nosi/${VARIANT}"
 
 # Resolve the .img.gz blob's content-addressed digest from the manifest.
 DIGEST=$(oras manifest fetch "${REPO}:latest" \
@@ -73,7 +73,7 @@ Same idea works against the weekly tag (`YYYY.WNN`, e.g. `2026.W25`)
 instead of `:latest` if you want a pinned reference; bty consumes by
 blob digest exactly because the digest is the only truly stable name.
 
-`oras repo tags ghcr.io/safl/nosi/<variant>` enumerates the ISO-week
+`oras repo tags ghcr.io/refenv/nosi/<variant>` enumerates the ISO-week
 tags for a variant. See [](release.md) for the weekly-release model
 and the within-week clobber semantics.
 
@@ -95,7 +95,7 @@ winget install -e --id ORASProject.ORAS
 too if you prefer those.
 
 ```powershell
-oras pull "ghcr.io/safl/nosi/ubuntu-2604-wsl:latest"
+oras pull "ghcr.io/refenv/nosi/ubuntu-2604-wsl:latest"
 wsl --import nosi-wsl "$env:USERPROFILE\WSL\nosi-wsl" nosi-ubuntu-2604-wsl.tar.gz
 wsl -d nosi-wsl
 ```
@@ -116,7 +116,7 @@ directly as a CT template. On the Proxmox host:
 # Pull the template into a storage's template cache
 # (local storage keeps templates in /var/lib/vz/template/cache/).
 cd /var/lib/vz/template/cache
-oras pull "ghcr.io/safl/nosi/debian-13-lxc:latest"
+oras pull "ghcr.io/refenv/nosi/debian-13-lxc:latest"
 
 # Create + start the container (CT id 200, adjust to taste).
 pct create 200 local:vztmpl/nosi-debian-13-lxc.tar.zst \

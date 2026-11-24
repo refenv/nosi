@@ -60,7 +60,7 @@ publish.gzip_level = 9
 # can nbdboot this image via NBD using the image's OWN kernel. Only headless
 # images ship a netboot bundle.
 netboot.bundle_dir = "{{ local.env.HOME }}/system_imaging/disk/nosi-arch-headless-netboot-x86_64"
-netboot.source_disk_ref = "ghcr.io/safl/nosi/arch-headless"
+netboot.source_disk_ref = "ghcr.io/refenv/nosi/arch-headless"
 
 # No derives: Arch ships only the headless minimal netboot base (no desktop /
 # wsl / lxc / docker / proxmox shapes).

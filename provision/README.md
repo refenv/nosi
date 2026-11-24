@@ -146,7 +146,7 @@ Reaches the same parity as a flashed nosi image on a VM whose OS was
 installed by someone else. The script clones the repo, then dispatches:
 
 ```
-git clone https://github.com/safl/nosi /opt/nosi
+git clone https://github.com/refenv/nosi /opt/nosi
 sudo /opt/nosi/provision/apply.sh <variant>
 ```
 
